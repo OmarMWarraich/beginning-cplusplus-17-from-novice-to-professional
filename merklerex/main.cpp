@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 
 void printMenu()
 {
@@ -59,33 +60,43 @@ int getUserOption()
 
 void processUserOption(int userOption)
 {
+    
+  std::map<int,void(*)()> menu;
+    menu[1] = printError; 
+    menu[2] = printHelp; 
+    menu[3] = printStats; 
+    menu[4] = placeOffer;
+    menu[5] = placeBid; 
+    menu[6] = printWallet; 
+    menu[7] = printContinue; 
+
     if (userOption < 1 || userOption > 6)
     {
-       printError(); 
+       menu[1](); 
     }
     if (userOption == 1)
     {
-       printHelp(); 
+       menu[2](); 
     }
     if (userOption == 2)
     {
-       printStats(); 
+      menu[3](); 
     }
     if (userOption == 3)
     {
-       placeOffer(); 
+       menu[4](); 
     }
     if (userOption == 4)
     {
-       placeBid(); 
+       menu[5](); 
     }
     if (userOption == 5)
     {
-       printWallet(); 
+       menu[6](); 
     }
     if (userOption == 6)
     {
-       printContinue(); 
+       menu[7](); 
     }
 }
 
