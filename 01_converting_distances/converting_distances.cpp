@@ -11,7 +11,7 @@ int main()
   const unsigned inches_per_foot{ 12 };
   unsigned total_inches{};
   total_inches = inches + inches_per_foot * (yards * feet_per_yard + feet);
-  std::cout << "The distances corresponds to " << total_inches << " inches.\n";
+  std::cout << "The distances \t corresponds \v to  \a " << total_inches << " inches.\n";
   // Convert a distance in inches to yards feet and inches
   std::cout << "Enter a distance in inches: ";
   std::cin >> total_inches;
