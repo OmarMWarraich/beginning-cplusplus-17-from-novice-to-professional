@@ -40,3 +40,4 @@ a.out
 
 # debug information files
 *.dwo
+settings.json
